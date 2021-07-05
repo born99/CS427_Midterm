@@ -14,10 +14,12 @@ public class MainCharaterControler : MonoBehaviour
     public LayerMask Ground;
     public float jumpSpeed;
     Animator anim;
+    public GameObject ground;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -58,6 +60,8 @@ public class MainCharaterControler : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, 0); 
         }
+      
+        
     }
     public void distroyCharacter()
     {
