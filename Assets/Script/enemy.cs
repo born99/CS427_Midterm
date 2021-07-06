@@ -17,19 +17,39 @@ public class enemy : MonoBehaviour
     public Transform[] shotpoint;
     public float decreaseTime;
     public float minTime=0.8f;
+    public Transform detec;
+    bool movingright = true;
+    Vector3 detecpos;
     void Start()
     {
         
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBwtshots = starttimeBtwShots;
+        detecpos = detec.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+         
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(detecpos.x,transform.position.y), speed * Time.deltaTime);
+        if(transform.position.x==detecpos.x )
+        {
+            if(movingright ==true)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                detecpos = detec.position;
+                movingright = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                movingright = true;
+            }
+            detecpos = detec.position;
+            
+        }
+        /*if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             if (transform.position.y > distance)
             {
@@ -44,7 +64,7 @@ public class enemy : MonoBehaviour
         else if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
         {
             transform.position = this.transform.position;
-        }
+        }*/
 
       
         if(timeBwtshots<=0)
@@ -52,7 +72,7 @@ public class enemy : MonoBehaviour
             int rand = Random.Range(0, 10);
             if (rand < 2)
             {
-                Instantiate(projectile[1], shotpoint[1].position, Quaternion.identity);
+                Instantiate(projectile[0], shotpoint[1].position, Quaternion.identity);
                 Instantiate(projectile[0], shotpoint[0].position, Quaternion.identity);
             }else if(rand < 5)
             {
