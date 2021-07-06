@@ -72,13 +72,10 @@ public class enemy : MonoBehaviour
             int rand = Random.Range(0, 10);
             if (rand < 2)
             {
-                Instantiate(projectile[0], shotpoint[1].position, Quaternion.identity);
-                Instantiate(projectile[0], shotpoint[0].position, Quaternion.identity);
-            }else if(rand < 5)
-            {
-                Instantiate(projectile[0], shotpoint[1].position, Quaternion.identity);
+                Instantiate(projectile[1], shotpoint[1].position, Quaternion.identity);
                 Instantiate(projectile[0], shotpoint[0].position, Quaternion.identity);
             }
+
             else
             {
                 int r = Random.Range(0, projectile.Length);

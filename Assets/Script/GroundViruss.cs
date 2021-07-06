@@ -9,7 +9,7 @@ public class GroundViruss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("destroyG", 3);
+        Invoke("destroyG", 6);
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class GroundViruss : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
+            collision.GetComponent<MainCharaterControler>().distroyCharacter();
         }
     }
     void destroyG()
