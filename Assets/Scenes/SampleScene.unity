@@ -1433,6 +1433,8 @@ MonoBehaviour:
     m_Bits: 64
   jumpSpeed: 25
   ground: {fileID: 0}
+  startDashtime: 1
+  dashDistance: 6
 --- !u!1 &881546587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1610,7 @@ GameObject:
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

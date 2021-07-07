@@ -32,7 +32,7 @@ public class Projectile2 : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(viruss.x, viruss.y - distance), speed * Time.deltaTime);
         }
         time -= Time.deltaTime;
-        Debug.Log(time);
+        
         
         isground = Physics2D.OverlapCircle(transform.position, checkradius, Ground);
         if (!isground && time<=0)
@@ -48,9 +48,9 @@ public class Projectile2 : MonoBehaviour
     {
         if (orther.CompareTag("Player"))
         {
-            orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            //orther.GetComponent<MainCharaterControler>().distroyCharacter();
             DestroyProjectile();
-            Debug.Log("qqqq");
+           
 
         }
 

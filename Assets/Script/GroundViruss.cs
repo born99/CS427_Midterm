@@ -22,7 +22,7 @@ public class GroundViruss : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
-            collision.GetComponent<MainCharaterControler>().distroyCharacter();
+            //collision.GetComponent<MainCharaterControler>().distroyCharacter();
         }
     }
     void destroyG()
