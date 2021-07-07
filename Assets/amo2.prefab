@@ -134,7 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  distance: 0.5
   lifetime: 3
   checkradius: 0.5
   Ground:

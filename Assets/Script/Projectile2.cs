@@ -8,7 +8,7 @@ public class Projectile2 : MonoBehaviour
     public float speed;
     Transform player;
     Vector2 target;
-    public float distance;
+     float distance;
     public float lifetime;
     bool isground;
     public float checkradius;
@@ -27,9 +27,11 @@ public class Projectile2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int rand = Random.Range(-3, 3);
+        distance = rand;
         if (time > 0 && !isground)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(viruss.x, viruss.y - distance), speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(viruss.x-distance, viruss.y), speed * Time.deltaTime);
         }
         time -= Time.deltaTime;
         

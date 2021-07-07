@@ -2227,6 +2227,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
+      propertyPath: distance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
       propertyPath: shotpoint
       value: 
       objectReference: {fileID: 1258301922}

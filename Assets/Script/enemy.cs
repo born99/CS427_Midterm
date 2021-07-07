@@ -6,10 +6,9 @@ public class enemy : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public float stoppingDistance;
-    public float retreatDistance;
+   
     public Transform player;
-    public float distance;
+
     public GameObject[] projectile;
     float timeBwtshots;
     public float starttimeBtwShots;
