@@ -101,7 +101,7 @@ public class MainCharaterControler : MonoBehaviour
         {
             dashtime -= Time.deltaTime;
         }
-        Debug.Log(dashtime);
+      
         
         
       
@@ -111,6 +111,7 @@ public class MainCharaterControler : MonoBehaviour
     {
         dash = true;
         anim.SetTrigger("dash");
+        this.GetComponent<echoEffect>().enabled = true;
         rigid.velocity = new Vector2(rigid.velocity.x, 0f);
         rigid.AddForce(new Vector2(dashDistance * di, 0f), ForceMode2D.Impulse);
         float gravity = rigid.gravityScale;
@@ -118,6 +119,7 @@ public class MainCharaterControler : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         dash = false;
         rigid.gravityScale = gravity;
+        this.GetComponent<echoEffect>().enabled = false;
 
     }
     public void distroyCharacter()

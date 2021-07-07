@@ -48,7 +48,7 @@ public class Projectile2 : MonoBehaviour
     {
         if (orther.CompareTag("Player"))
         {
-            //orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            orther.GetComponent<MainCharaterControler>().distroyCharacter();
             DestroyProjectile();
            
 
