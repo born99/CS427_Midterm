@@ -2173,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 872796750}
     - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
       propertyPath: minTime
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
       propertyPath: shotpoint
@@ -2186,6 +2186,10 @@ PrefabInstance:
     - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
       propertyPath: stoppingDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
+      propertyPath: starttimeBtwShots
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3093385794800463771, guid: 9272b511bf543404c9a2db0b548fe244, type: 3}
       propertyPath: shotpoint.Array.size
