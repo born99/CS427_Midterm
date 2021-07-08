@@ -13,20 +13,27 @@ public class Projectile2 : MonoBehaviour
     bool isground;
     public float checkradius;
     public LayerMask Ground;
-    float time;
+    float time,time2;
     Vector2 viruss;
+    public Transform Amo2Effect;
+    Animator anim;
+   
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = GetComponent<Animator>();
         target = player.position;
         time = 1f;
         viruss = transform.position;
+        time2 = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        time2 += Time.deltaTime;
+      
         int rand = Random.Range(-3, 3);
         distance = rand;
         if (time > 0 && !isground)
@@ -45,6 +52,12 @@ public class Projectile2 : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
         }
+        if(lifetime-time2<=0.5)
+        {
+            anim.Play("destroyAmo2");
+            
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D orther)
     {
@@ -60,6 +73,7 @@ public class Projectile2 : MonoBehaviour
     }
     void DestroyProjectile()
     {
+        Instantiate(Amo2Effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

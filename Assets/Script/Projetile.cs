@@ -12,19 +12,23 @@ public class Projetile : MonoBehaviour
     bool isground;
     public float checkradius;
     public LayerMask Ground;
-    
+    public Transform amoEffect;
+     Animator anim ;
+    float time;
     // Start is called before the first frame update
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = player.position;
+        anim = GetComponent<Animator>();
+        time = lifetime;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        time -= Time.deltaTime;
         isground = Physics2D.OverlapCircle(transform.position, checkradius, Ground);
         if (!isground)
         {
@@ -34,6 +38,11 @@ public class Projetile : MonoBehaviour
             transform.Translate(Vector2.down * speed * Time.deltaTime);
             
         }
+        if(isground)
+        {
+            anim.Play("amo1");
+        }
+       
 
     }
     private void OnTriggerEnter2D(Collider2D orther)
@@ -42,14 +51,16 @@ public class Projetile : MonoBehaviour
         {
             orther.GetComponent<MainCharaterControler>().distroyCharacter();
             DestroyProjectile();
-           
 
         }
+       
      
        
     }
+    
     void DestroyProjectile()
     {
+        Instantiate(amoEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }    
 }

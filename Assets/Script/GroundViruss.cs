@@ -6,6 +6,7 @@ public class GroundViruss : MonoBehaviour
 {
     public int damage = 1;
     public float speed;
+    public Transform effect;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class GroundViruss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)

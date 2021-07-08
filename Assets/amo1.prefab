@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8284809851958543518}
   - component: {fileID: -2944707573275212627}
   - component: {fileID: 4212804332525573251}
+  - component: {fileID: 2132939420}
   m_Layer: 0
   m_Name: amo1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3102732747966159936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.526, y: -1.277, z: 0}
+  m_LocalPosition: {x: -0.986, y: -1.659, z: 0}
   m_LocalScale: {x: 0.6635, y: 0.6635, z: 0.6635}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,6 +121,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
+  amoEffect: {fileID: 5249730094225897236, guid: 8857ce64a19f2fe4881323a940c8d603, type: 3}
 --- !u!96 &4212804332525573251
 TrailRenderer:
   serializedVersion: 2
@@ -170,6 +172,15 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 0.99374616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 1
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.0055709183
         value: 1
         inSlope: 0
         outSlope: 0
@@ -199,15 +210,15 @@ TrailRenderer:
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 386
-      ctime1: 64186
+      ctime0: 578
+      ctime1: 63993
       ctime2: 64379
       ctime3: 0
       ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
+      atime0: 578
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -227,3 +238,22 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!95 &2132939420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102732747966159936}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4345cdd8ba7d5be4b9a0e4a7b2723936, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2728620315026402038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.67, y: -0.9, z: 0}
+  m_LocalPosition: {x: -5.981, y: -0.681, z: 0}
   m_LocalScale: {x: 0.48279905, y: 0.48279905, z: 0.48279905}
   m_Children: []
   m_Father: {fileID: 0}
@@ -139,6 +139,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
+  Amo2Effect: {fileID: 3240431104981633602, guid: 64e5bd130916c8545aa3fabe000c3012, type: 3}
 --- !u!96 &179069738329003474
 TrailRenderer:
   serializedVersion: 2

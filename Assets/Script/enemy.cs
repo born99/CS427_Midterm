@@ -85,6 +85,7 @@ public class enemy : MonoBehaviour
             {
                 starttimeBtwShots -= decreaseTime;
             }
+            
         }
         else
         {
