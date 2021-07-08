@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using TMPro;
+using System;
 public class MainCharaterControler : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text score;
+    public TMP_Text[] score;
     Rigidbody2D rigid;
     public float speed;
      float moveinput;
@@ -30,6 +31,7 @@ public class MainCharaterControler : MonoBehaviour
     public Image[] healths;
     public Sprite fullhearth;
     public Sprite emptyhearth;
+    public GameObject[] sound;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -47,9 +49,12 @@ public class MainCharaterControler : MonoBehaviour
         {
             rigid.velocity = new Vector2(moveinput * speed, rigid.velocity.y);
         }
-        score.text = timeSurive.ToString("0.00");
+        score[0].text = timeSurive.ToString("0.00");
+        score[1].text = timeSurive.ToString("0.00");
         if(health<=0)
         {
+            
+            Instantiate(sound[0], transform.position, Quaternion.identity);
             distroyCharacter();
         }
         
@@ -80,6 +85,7 @@ public class MainCharaterControler : MonoBehaviour
         if(isGround == true && Input.GetKeyDown(KeyCode.Space) && !dash)
         {
             rigid.velocity = Vector2.up * jumpSpeed;
+            Instantiate(sound[1], transform.position, Quaternion.identity);
             anim.SetTrigger("take off");
         }
         if(isGround==true)
@@ -160,7 +166,9 @@ public class MainCharaterControler : MonoBehaviour
     }
     public void distroyCharacter()
     {
+
         gameover.SetActive(true);
+        
         Destroy(gameObject);
     }
 
