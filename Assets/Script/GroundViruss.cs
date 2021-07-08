@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GroundViruss : MonoBehaviour
 {
-    public int damage = 1;
+    public int damage = 2;
     public float speed;
     public Transform effect;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,10 @@ public class GroundViruss : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            
+            collision.GetComponent<MainCharaterControler>().health-=damage;
+            collision.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
             Destroy(gameObject);
-            collision.GetComponent<MainCharaterControler>().distroyCharacter();
         }
     }
     void destroyG()

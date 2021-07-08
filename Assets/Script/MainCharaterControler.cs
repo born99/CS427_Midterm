@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainCharaterControler : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Text score;
     Rigidbody2D rigid;
     public float speed;
      float moveinput;
@@ -13,14 +16,20 @@ public class MainCharaterControler : MonoBehaviour
     public float checkradius;
     public LayerMask Ground;
     public float jumpSpeed;
-    Animator anim;
+    public Animator anim;
     public GameObject ground;
     public float startDashtime;
     float dashtime;
-    
+    float timeSurive;
     bool dash = false;
     bool movingR;
     public float dashDistance;
+    public GameObject gameover;
+    public int health=3;
+    public int numOfheart=3;
+    public Image[] healths;
+    public Sprite fullhearth;
+    public Sprite emptyhearth;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -32,14 +41,41 @@ public class MainCharaterControler : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        timeSurive += Time.deltaTime;
         moveinput = Input.GetAxisRaw("Horizontal");
         if (dash == false)
         {
             rigid.velocity = new Vector2(moveinput * speed, rigid.velocity.y);
         }
+        score.text = timeSurive.ToString("0.00");
+        if(health<=0)
+        {
+            distroyCharacter();
+        }
+        
     }
     void Update()
     {
+        for (int i = 0; i < healths.Length; i++)
+        {
+            if(i<health)
+            {
+                healths[i].sprite = fullhearth;
+            }
+            else
+            {
+                healths[i].sprite = emptyhearth;
+            }
+            if(i<numOfheart)
+            {
+                healths[i].enabled = true;
+            }
+            else
+            {
+                healths[i].enabled = false;
+            }
+        }
+
         isGround = Physics2D.OverlapCircle(feetPos.position, checkradius, Ground);
         if(isGround == true && Input.GetKeyDown(KeyCode.Space) && !dash)
         {
@@ -124,6 +160,8 @@ public class MainCharaterControler : MonoBehaviour
     }
     public void distroyCharacter()
     {
+        gameover.SetActive(true);
         Destroy(gameObject);
     }
+
 }

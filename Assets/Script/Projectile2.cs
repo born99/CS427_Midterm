@@ -17,7 +17,7 @@ public class Projectile2 : MonoBehaviour
     Vector2 viruss;
     public Transform Amo2Effect;
     Animator anim;
-   
+    public int damage = 1;
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
@@ -63,7 +63,8 @@ public class Projectile2 : MonoBehaviour
     {
         if (orther.CompareTag("Player"))
         {
-            orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            orther.GetComponent<MainCharaterControler>().health-=damage;
+            orther.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
             DestroyProjectile();
            
 
