@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  lifetime: 3
+  lifetime: 3.5
   checkradius: 0.5
   Ground:
     serializedVersion: 2

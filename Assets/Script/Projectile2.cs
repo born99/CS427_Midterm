@@ -55,7 +55,7 @@ public class Projectile2 : MonoBehaviour
         if(lifetime-time2<=0.5)
         {
             anim.Play("destroyAmo2");
-            
+             
         }
 
     }
