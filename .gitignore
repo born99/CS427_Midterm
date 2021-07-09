@@ -62,3 +62,5 @@ Thumbs.db.meta
 # VS Code
 *.vscode
 ProjectSettings/EditorBuildSettings.asset
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/MainMenu.unity.meta
