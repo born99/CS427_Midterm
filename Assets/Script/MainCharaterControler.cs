@@ -125,7 +125,9 @@ public class MainCharaterControler : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.J))
         {
             if (dashtime <= 0)
+
             {
+                Instantiate(sound[2], transform.position, Quaternion.identity);
                 if (movingR)
                 {
                     StartCoroutine(Dash(1));

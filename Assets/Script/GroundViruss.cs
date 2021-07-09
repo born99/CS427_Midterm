@@ -7,6 +7,7 @@ public class GroundViruss : MonoBehaviour
     public int damage = 2;
     public float speed;
     public Transform effect;
+    public GameObject Hitsound;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class GroundViruss : MonoBehaviour
             
             collision.GetComponent<MainCharaterControler>().health-=damage;
             collision.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
+            Instantiate(Hitsound, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

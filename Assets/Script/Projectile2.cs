@@ -18,6 +18,7 @@ public class Projectile2 : MonoBehaviour
     public Transform Amo2Effect;
     Animator anim;
     public int damage = 1;
+    public GameObject Hitsound;
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
@@ -65,6 +66,7 @@ public class Projectile2 : MonoBehaviour
         {
             orther.GetComponent<MainCharaterControler>().health-=damage;
             orther.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
+            Instantiate(Hitsound, transform.position, Quaternion.identity);
             DestroyProjectile();
            
 
