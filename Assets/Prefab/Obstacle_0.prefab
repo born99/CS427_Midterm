@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449c9b7653da1f141aecdf7d5257a1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   speed: 5
   effect: {fileID: 0}
+  Hitsound: {fileID: 1634299466539315460, guid: 1d0b062b55c12fe4587020e0f745be9c, type: 3}
 --- !u!58 &6107293287511278649
 CircleCollider2D:
   m_ObjectHideFlags: 0
