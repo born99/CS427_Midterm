@@ -15,6 +15,8 @@ public class Projetile : MonoBehaviour
     public Transform amoEffect;
      Animator anim ;
     float time;
+    public int damage = 1;
+    public GameObject Hitsound;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,9 @@ public class Projetile : MonoBehaviour
     {
         if (orther.CompareTag("Player"))
         {
-            orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            orther.GetComponent<MainCharaterControler>().health-=damage;
+            orther.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
+            Instantiate(Hitsound, transform.position, Quaternion.identity);
             DestroyProjectile();
 
         }
