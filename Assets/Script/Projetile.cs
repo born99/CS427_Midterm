@@ -12,12 +12,16 @@ public class Projetile : MonoBehaviour
     bool isground;
     public float checkradius;
     public LayerMask Ground;
-    
+    public int damage;
+    public Transform amo1effect;
+    public GameObject Hitsound;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = GetComponent<Animator>();
         target = player.position;
     }
 
@@ -34,21 +38,28 @@ public class Projetile : MonoBehaviour
             transform.Translate(Vector2.down * speed * Time.deltaTime);
             
         }
+        else
+        {
+            anim.Play("amo1");
+        }    
 
     }
     private void OnTriggerEnter2D(Collider2D orther)
     {
         if (orther.CompareTag("Player"))
         {
-            orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            orther.GetComponent<MainCharaterControler>().health -= damage;
+            orther.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
+            Instantiate(Hitsound, transform.position, Quaternion.identity);
             DestroyProjectile();
-           
+
         }
      
        
     }
     void DestroyProjectile()
     {
+        Instantiate(amo1effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }    
 }

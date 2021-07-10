@@ -15,6 +15,11 @@ public class Projectile2 : MonoBehaviour
     public LayerMask Ground;
     float time;
     Vector2 viruss;
+    public Transform amo2effect;
+    public int damage;
+    public GameObject Hitsound;
+    float starttime;
+    Animator anim;
     void Start()
     {
         Invoke("DestroyProjectile", lifetime);
@@ -22,11 +27,17 @@ public class Projectile2 : MonoBehaviour
         target = player.position;
         time = 1f;
         viruss = transform.position;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        starttime += Time.deltaTime;
+        if(lifetime-starttime<=0.5)
+        {
+            anim.SetTrigger("destroy");
+        }    
         if (time > 0 && !isground)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(viruss.x, viruss.y - distance), speed * Time.deltaTime);
@@ -48,7 +59,9 @@ public class Projectile2 : MonoBehaviour
     {
         if (orther.CompareTag("Player"))
         {
-            orther.GetComponent<MainCharaterControler>().distroyCharacter();
+            orther.GetComponent<MainCharaterControler>().health -= damage;
+            orther.GetComponent<MainCharaterControler>().anim.SetTrigger("hited");
+            Instantiate(Hitsound, transform.position, Quaternion.identity);
             DestroyProjectile();
            
 
@@ -58,6 +71,7 @@ public class Projectile2 : MonoBehaviour
     }
     void DestroyProjectile()
     {
+        Instantiate(amo2effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
