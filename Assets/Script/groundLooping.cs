@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class groundLooping : MonoBehaviour
 {
-    [Range(0, 2f)]
-    public float scrollSpeed = 0.5f;
+    [Range(0, 1f)]
+    public float scrollSpeed = 1f;
     private float offset;
     private Material mat;
 
