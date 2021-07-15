@@ -4,17 +4,35 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class MainMenu : MonoBehaviour
 {
-    public Slider[] volumeSliders;
-    public Toggle[] resolutionToggles;
-    public int[] screenWidths;
-    int activeScreenResIndex;
+    Resolution[] resolutions;
+    public Dropdown resolutionDropdown;
+
     void Start()
     {
+        resolutions = Screen.resolutions;
 
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+        int currentResolutionIndex = 0;
+        for(int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+
+            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
     }
+
 
     public void PlayGame()
     {
@@ -27,33 +45,19 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetScreenResolution(int i)
+    public void SetResolution(int resolutionIndex)
     {
-        if (resolutionToggles[i].isOn)
-        {
-            activeScreenResIndex = i;
-            float aspectRatio = 16 / 9f;
-            Screen.SetResolution(screenWidths[i], (int)(screenWidths[i] / aspectRatio), false);            
-        }
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
-        for (int i = 0; i < resolutionToggles.Length; i++)
-        {
-            resolutionToggles[i].interactable = !isFullscreen;
-        }
-
-        if (isFullscreen)
-        {
-            Resolution[] allResolutions = Screen.resolutions;
-            Resolution maxResolution = allResolutions[allResolutions.Length - 1];
-            Screen.SetResolution(maxResolution.width, maxResolution.height, true);
-        }
-        else
-        {
-            SetScreenResolution(activeScreenResIndex);
-        }
+        Screen.fullScreen = isFullscreen;
     }
-
 }
