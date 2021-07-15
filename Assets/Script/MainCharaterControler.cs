@@ -32,6 +32,7 @@ public class MainCharaterControler : MonoBehaviour
     public Sprite fullhearth;
     public Sprite emptyhearth;
     public GameObject[] sound;
+    public GameObject light;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -61,6 +62,7 @@ public class MainCharaterControler : MonoBehaviour
     }
     void Update()
     {
+        
         for (int i = 0; i < healths.Length; i++)
         {
             if(i<health)
@@ -90,10 +92,12 @@ public class MainCharaterControler : MonoBehaviour
         }
         if(isGround==true)
         {
+            light.SetActive(true);
             anim.SetBool("jump", false);
         }
         else
         {
+            light.SetActive(false);
             anim.SetBool("jump", true);
         }
         if (moveinput==0 && isGround)
