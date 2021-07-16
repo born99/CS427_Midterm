@@ -7850,7 +7850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 7858422816696562194, guid: cc51df38b07ba294d949d97f00f1463d, type: 3}
   soundEffectSlider: {fileID: 7058907348231206383, guid: fefa9ca931da18645b27b9f6ed1b7bcb, type: 3}
-  backgroundAudio: {fileID: 0}
+  backgroundAudio: {fileID: 7165374020123291444, guid: 8f5a0207123777f489ea5b9cebe626d3, type: 3}
   soundEffectAudio:
   - {fileID: 526946566}
   - {fileID: 184067559}
