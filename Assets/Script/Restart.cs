@@ -6,8 +6,6 @@ public class Restart : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject clicksound;
-    // Update is called once per frame
     public void PlayGame()
     {
        
