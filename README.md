@@ -25,7 +25,7 @@
 <img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">
 
 * As you can see from the pictures above, there are 3 “heart” icon represents 3 HP, once it becomes 0, you will lose the game.
-The top right corner is the time (and the score) you survive.\
+The top right corner is the time (and the score) you survive.
 * Try to avoid all viruses, hit the black viruses, you will lose 2 HP, hit the new-created viruses, you lose 1 HP.
 
 
@@ -40,7 +40,10 @@ The top right corner is the time (and the score) you survive.\
 * The viruses movement are based on particle system.
 * We manage to minimize the hitbox while dashing.
 * Most of the character are designed by us ourselves with meaningful purposes.
+* Multiple resolutions available with sound effects controls
 
+## Demo 
+* [Youtube](https://www.youtube.com/watch?v=jn3pMAl4tV0)
 
 ## Unity Version
 * Available on Unity version 20.3.10f1
@@ -51,3 +54,4 @@ The top right corner is the time (and the score) you survive.\
 * [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)
 * [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)
 * [Ground](https://www.pinterest.com/)
+* [Parallax background](https://www.youtube.com/watch?v=zit45k6CUMk)
