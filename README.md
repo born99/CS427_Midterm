@@ -28,4 +28,3 @@
 20
 
 ## Resource references
-Sound Effect & Music: https://freesound.org/
