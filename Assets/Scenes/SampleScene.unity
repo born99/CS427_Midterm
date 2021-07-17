@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 6107293287511278597, guid: 219756a9120406c4f91142d7f2d8019d, type: 3}
   decreaseTime: 0.05
-  minTime: 3
+  minTime: 2.5
   left: {fileID: 853872011}
   right: {fileID: 1372675576}
   starttime: 5
