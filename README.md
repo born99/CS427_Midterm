@@ -56,7 +56,7 @@ The top right corner is the time (and the score) you survive.
 * Multiple resolutions available with sound effects controls
 
 ## Demo 
-* [Youtube](https://www.youtube.com/watch?v=jn3pMAl4tV0)
+* [Youtube Demo](https://www.youtube.com/watch?v=jn3pMAl4tV0)
 
 ## Unity Version
 * Available on Unity version 20.3.10f1
