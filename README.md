@@ -11,13 +11,23 @@
 
 
 
-## Brief Introduction
+
 
 ## Story
-
+To bring the inspiration for everybody around us to be motivated for preventing Covid-19, we create a wonderful name called “Quarantine”. 
+The game operation is quite simple, the doctor is on his way to bring vaccines to citizens, and he must dodge any viruses coming to avoid being infected, the longer he survives, the higher score you can get. 
+The idea behind this “Endless Runner Game” is to raise the awareness of people: _“You could be infected someday unless you stay at home”_. The game also extends our appreciations and thanks to the doctors who are doing their best fighting to viruses, despite the risk to save our world.
 
 ## Gameplay
-<img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">
+
+You control the docter and help him to dodge as much viruses as possible. The longer time he survives, the more he can help people.\
+<br />
+<img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">\
+
+As you can see from the pictures above, there are 3 “heart” icon represents 3 HP, once it becomes 0, you will lose the game.\
+The top right corner is the time (and the score) you survive.
+Try to avoid all viruses, hit the black viruses, you will lose 2 HP, hit the new-created viruses, you lose 1 HP.
+
 
 ## How to play
 <kbd> **A** </kbd> __or__ <kbd> **🠦** </kbd>   : Move left\
@@ -26,9 +36,11 @@
 <kbd> **J** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash
 
 ## Unity Version
-20
+Available on Unity version 20.3.10f1
 
 ## Resource references
+ Sound Effect & Music: https://freesound.org/ \
+ https://www.youtube.com/watch?v=zc8ac_qUXQY\
  [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)\
  [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)\
  [Ground](https://www.pinterest.com/) 
