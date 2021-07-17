@@ -1,6 +1,5 @@
 # CS427_Midterm - QUARANTINE
-## Authors
-### Group 9 - 'Wakanda'
+## Authors - Group 9 - 'Wakanda'
  1. [Nguyen Minh Quan](https://github.com/zxquan123) &emsp;&ensp; - 1751097
  2. [Nguyen Minh Nhat](https://github.com/born99) &emsp;&ensp;&nbsp; - 1751090
  3. [Dang Le Tuan Anh](https://github.com/dangletuananh69) &emsp;&ensp;&ensp;&nbsp; - 1751049
