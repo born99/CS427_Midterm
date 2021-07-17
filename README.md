@@ -20,9 +20,15 @@
 
 ## Gameplay
 
+* Download the project:
 ```
+//To downlaod the project
 git clone https://github.com/born99/CS427_Midterm.git
+
+//Go to the Build and Run folder
 cd '.\CS427_Midterm\Build and Run\'
+
+//Run file .exe and play
 ./CS427_Midterm.exe
 ```
 
