@@ -19,6 +19,7 @@ public class enemy : MonoBehaviour
     public Transform detec;
     bool movingright = true;
     Vector3 detecpos;
+    public GameObject sound;
     void Start()
     {
         
@@ -73,12 +74,14 @@ public class enemy : MonoBehaviour
             {
                 Instantiate(projectile[1], shotpoint[1].position, Quaternion.identity);
                 Instantiate(projectile[0], shotpoint[0].position, Quaternion.identity);
+                Instantiate(sound, transform.position, Quaternion.identity);
             }
 
             else
             {
                 int r = Random.Range(0, projectile.Length);
                 Instantiate(projectile[r], shotpoint[r].position, Quaternion.identity);
+                Instantiate(sound, transform.position, Quaternion.identity);
             }
             timeBwtshots = starttimeBtwShots;
             if(starttimeBtwShots>minTime)
