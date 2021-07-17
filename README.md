@@ -11,7 +11,7 @@ Datebayo!
 ## Applications
 
 ## Control
-**<kbd> **A** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp; : Move left\
+**<kbd> **A** </kbd> or <kbd> **&#8594** </kbd>  : Move left\
 <kbd> **D** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Move right\
 <kbd>	**Spacebar** </kbd>&emsp;&nbsp;&ensp;        : Jump\
 <kbd> **J** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash\**
