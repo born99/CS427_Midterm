@@ -20,6 +20,12 @@
 
 ## Gameplay
 
+```
+git clone https://github.com/born99/CS427_Midterm.git
+cd '.\CS427_Midterm\Build and Run\'
+./CS427_Midterm.exe
+```
+
 * You control the docter and help him to dodge as much viruses as possible. The longer time he survives, the more he can help people.
 <br />
 <img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">
@@ -30,8 +36,8 @@ The top right corner is the time (and the score) you survive.
 
 
 ## How to play
-* <kbd> **A** </kbd> __or__ <kbd> **🠦** </kbd>   : Move left
-* <kbd> **D** </kbd> __or__ <kbd> **🠤** </kbd>     : Move right
+* <kbd> **A** </kbd> or <kbd> **🠦** </kbd>   : Move left
+* <kbd> **D** </kbd> or <kbd> **🠤** </kbd>     : Move right
 * <kbd>	**Spacebar** </kbd>&emsp;&nbsp;&ensp;        : Jump
 * <kbd> **J** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash
 
@@ -49,7 +55,7 @@ The top right corner is the time (and the score) you survive.
 * Available on Unity version 20.3.10f1
 
 ## Resource references
-* Sound Effect & Music: https://freesound.org/ 
+* [Sound Effect & Music](https://freesound.org/) 
 * https://www.youtube.com/watch?v=zc8ac_qUXQY
 * [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)
 * [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)
