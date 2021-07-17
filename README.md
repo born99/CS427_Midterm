@@ -20,18 +20,19 @@
 
 ## Gameplay
 
-* Download the project:
+* To downoad/clone the project
 ```
-//To downlaod the project
 git clone https://github.com/born99/CS427_Midterm.git
-
-//Go to the Build and Run folder
+```
+* Go to the Build and Run folder
+```
 cd '.\CS427_Midterm\Build and Run\'
-
-//Run file .exe and play
+```
+* Run file .exe and play
+```
 ./CS427_Midterm.exe
 ```
-
+<br /><br />
 * You control the docter and help him to dodge as much viruses as possible. The longer time he survives, the more he can help people.
 <br />
 <img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">
