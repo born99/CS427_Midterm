@@ -29,6 +29,6 @@
 20
 
 ## Resource references
- [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)
- [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)
- [Ground]()
+ [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)\
+ [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)\
+ [Ground](https://www.pinterest.com/) 
