@@ -18,14 +18,17 @@
 
 ## Gameplay
 <img src="https://github.com/born99/CS427_Midterm/blob/master/Gameplay.png" width="960" align="center">
+
 ## How to play
-<kbd> A </kbd> __or__ <kbd> 🠦 </kbd>   : Move left\
-<kbd> D </kbd> __or__ <kbd> 🠤 </kbd>     : Move right\
-<kbd>	Spacebar </kbd>&emsp;&nbsp;&ensp;        : Jump\
-<kbd> J </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash\
+<kbd> **A** </kbd> __or__ <kbd> **🠦** </kbd>   : Move left\
+<kbd> **D** </kbd> __or__ <kbd> **🠤** </kbd>     : Move right\
+<kbd>	**Spacebar** </kbd>&emsp;&nbsp;&ensp;        : Jump\
+<kbd> **J** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash
 
 ## Unity Version
 20
 
 ## Resource references
-Sound Effect & Music: https://freesound.org/
+ [Menu Background](https://www.freepik.com/free-vector/silhouette-skyline-illustration_3786396.htm)
+ [Background](https://www.patreon.com/ansimuz) by Luis Zuno (@ansimuz)
+ [Ground]()
