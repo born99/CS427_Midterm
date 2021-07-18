@@ -49,8 +49,8 @@ The top right corner is the time (and the score) you survive.
 * <kbd> **J** </kbd>&emsp;&emsp;&emsp;&emsp;&ensp;   : Dash
 
 ## Applications/Techniques
-* As for the gameplay feature, we provide an endless runner gameplay. We set a looping background and ground to with different scroll speed to run endlessly on a “parallax” scene.
-* The viruses movement are based on particle system.
+* As for the gameplay feature, we provide an endless runner gameplay. We set a looping background and ground to with different scroll speed to run endlessly on a “parallax” scene. We set up a difficulty-increasing scene instead of building a two-leveled game. The longer you can survive, the more/faster new viruses are spawned.
+* The effects are created using particle system.
 * We manage to minimize the hitbox while dashing.
 * Most of the character are designed by us ourselves with meaningful purposes.
 * Multiple resolutions available with sound effects controls
